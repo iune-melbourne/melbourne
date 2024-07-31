@@ -107,7 +107,7 @@ async def generate_scoreboards(
                 try:
                     _ = future.result()
                 except Exception as ex:
-                    logger.error(ex)
+                    logger.exception(ex)
                     raise HTTPException(
                         status_code=400, detail="Failed to generate scoreboards"
                     ) from ex
@@ -116,7 +116,7 @@ async def generate_scoreboards(
         try:
             zip_file = zip_scoreboards(images, settings.working_dir)
         except Exception as ex:
-            logger.error(ex)
+            logger.exception(ex)
             raise HTTPException(
                 status_code=400, detail="Failed to zip up scoreboards"
             ) from ex
