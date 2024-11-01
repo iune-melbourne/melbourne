@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.115.4",
+    "pydantic-settings>=2.6.1",
     "pydantic>=2.9.2",
     "python-multipart>=0.0.17",
     "uvicorn>=0.32.0",
