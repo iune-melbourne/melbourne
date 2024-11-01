@@ -1,0 +1,21 @@
+[project]
+name = "melbourne"
+version = "6.0.0"
+description = "Contest scoreboard generator"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["pydantic>=2.9.2", "xlrd==1.2.0"]
+
+[tool.uv]
+dev-dependencies = ["black>=24.10.0", "isort>=5.13.2", "mypy>=1.13.0"]
+
+[tool.mypy]
+mypy_path = "melbourne/"
+packages = ["melbourne"]
+explicit_package_bases = true
+strict = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["xlrd"]
+ignore_missing_imports = true
