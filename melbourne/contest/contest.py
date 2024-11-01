@@ -23,7 +23,7 @@ class Contest(BaseModel):
     def unique_pts(self) -> set[int]:
         scores: set[int] = set()
         for entry in self.entries:
-            scores.update(entry.unique_pts())
+            scores.update(entry.unique_pts)
         return scores
 
     def _validate_voter_num(self, voter_num: int) -> None:
