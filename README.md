@@ -27,6 +27,5 @@ For clarity, this most recent major rewrite of the program compared to previous 
 # Running 
 
 ```bash
-poetry install
-poetry run python -m uvicorn melbourne.api.api:app
+uv run python -m uvicorn melbourne.api.api:app
 ```
